@@ -1,0 +1,15 @@
+version: "1"
+
+networks:
+
+  mynet:
+    name: mynet
+    driver: bridge
+
+services:
+  apiserver:
+    build: .
+    ports:
+      - "5000:5000"
+    networks:
+      - mynet
